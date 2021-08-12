@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Moderat";
+  src: local("Moderat  Light"), local("Moderat--Light"),
+    url("Moderat-Light.woff2") format("woff2"),
+    url("Moderat-Light.woff") format("woff"),
+    url("Moderat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Moderat";
+  src: local("Moderat  Medium"), local("Moderat--Medium"),
+    url("Moderat-Medium.woff2") format("woff2"),
+    url("Moderat-Medium.woff") format("woff"),
+    url("Moderat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Moderat";
+  src: local("Moderat  Bold"), local("Moderat--Bold"),
+    url("Moderat-Bold.woff2") format("woff2"),
+    url("Moderat-Bold.woff") format("woff"),
+    url("Moderat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
