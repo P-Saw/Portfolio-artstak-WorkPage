@@ -1,14 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
-$fontSourceSans: "Source Sans Pro", sans-serif;
-
-@import url(../fonts/ModeratFont/style.css);
-$fontModerat: "Moderat";
-
-@import url(../fonts/MazzardFont/style.css);
-$fontMazzard: "Mazzard";
-
 @import "./variables";
-@import "./mediaQueries";
 @import "./header";
 
 *,
@@ -21,12 +11,21 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: wheat;
+  background-color: $bodyBg;
 }
 
 .scroll {
   overflow-y: hidden;
 }
 
-.content-wrapper {
+@media (min-width: $breakpoint-tablet) {
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media (min-width: $breakpoint-desktop) {
+  .content-wrapper {
+    grid-template-columns: repeat(14, 1fr);
+  }
 }

@@ -1,27 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 @import url(../fonts/ModeratFont/style.css);
 @import url(../fonts/MazzardFont/style.css);
-.navbar,
-.nav {
+.navbar {
+  width: 100%;
+  padding: 2rem 1rem 2rem 1rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.navbar {
-  background-color: #e2f754;
-  width: 100%;
-  padding: 2rem 1rem 2rem 1rem;
-  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .navbar .logo-text {
+  display: block;
+}
+
+.navbar .logo-only {
   display: none;
 }
 
@@ -153,71 +152,74 @@
 
 .nav .mail-contact p {
   font-weight: 500;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
 }
 
-@media (min-width: 750px) {
-  /* NAVBAR */
-  .navbar {
-    width: 90%;
-    max-width: 1400px;
-    margin: auto;
-    padding: 0;
+@media (min-width: 768px) {
+  header {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 6;
+    grid-column: 2/8;
   }
-  .logo-text {
+  .navbar {
+    padding: 2rem 0;
+    margin: 0;
+  }
+  .navbar .logo-text {
     display: block;
   }
-  .logo-only {
+  .navbar .logo-only {
+    display: none;
+  }
+  .menu-hamburger {
     display: none;
   }
   .nav {
+    background: transparent;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     position: relative;
     height: unset;
-    width: auto;
-    background: white;
+    width: unset;
     -webkit-transform: unset;
             transform: unset;
     top: 0;
   }
-  .list {
-    width: 100%;
+  .nav .list {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 1rem;
+  }
+  .nav .list .list-item {
     margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
-  .list-item {
-    margin: 1.5rem 0rem 1.5rem 1.5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .list-item a {
-    color: var(--grayish-violet);
-    letter-spacing: 0.1rem;
+  .nav .list .list-item a {
     font-size: 1rem;
   }
-  .list-item .btn {
-    color: var(--dark-violet);
-    border: 2px var(--dark-violet) solid;
+  .nav .list .list-item:first-child a {
+    background-color: #e2f754;
     padding: 1rem 2rem;
-    letter-spacing: 0.1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
+    border-radius: 2rem;
+    margin-left: 1.5rem;
   }
-  .list-item .btn:hover {
-    background-color: var(--dark-violet);
-    color: var(--light-gray);
-  }
-  .menu-hamburger {
+  .nav .mail-contact {
     display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 10;
+    grid-column: 3/13;
   }
 }
 
@@ -232,10 +234,26 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: wheat;
+  background-color: #f6f6f6;
 }
 
 .scroll {
   overflow-y: hidden;
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[8];
+        grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .content-wrapper {
+    -ms-grid-columns: (1fr)[14];
+        grid-template-columns: repeat(14, 1fr);
+  }
 }
 /*# sourceMappingURL=style.css.map */

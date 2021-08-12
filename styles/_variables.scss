@@ -14,3 +14,18 @@ $lineColor: #d0d0d0;
 $componentsText: #343240;
 $componentsGrayText: #9f9ab7;
 $chartGreen: #40b1a1;
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+$fontSourceSans: "Source Sans Pro", sans-serif;
+
+@import url(../fonts/ModeratFont/style.css);
+$fontModerat: "Moderat";
+
+@import url(../fonts/MazzardFont/style.css);
+$fontMazzard: "Mazzard";
+
+// Media Breakpoints
+$brakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
