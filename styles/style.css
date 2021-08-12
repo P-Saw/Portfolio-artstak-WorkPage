@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 @import url(../fonts/ModeratFont/style.css);
 @import url(../fonts/MazzardFont/style.css);
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
-@import url(../fonts/ModeratFont/style.css);
-@import url(../fonts/MazzardFont/style.css);
 .navbar,
 .nav {
   display: -webkit-box;
@@ -93,22 +90,33 @@
 }
 
 .nav {
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 116px);
   width: 100%;
   background: #e2f754;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   position: absolute;
-  top: 6rem;
+  top: 116px;
+  left: 0;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   -webkit-transform-origin: top;
           transform-origin: top;
-  will-change: transform;
   -webkit-transition: -webkit-transform 0.3s ease-in;
   transition: -webkit-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
   transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
-  z-index: 2;
 }
 
 .nav.nav-open {
@@ -116,41 +124,36 @@
           transform: scaleY(1);
 }
 
-.list {
-  width: 90%;
-  padding: 0;
-  margin: auto;
-  text-align: center;
+.nav .list {
+  padding: 2rem 1rem;
+  margin: 0;
 }
 
-.list-item {
+.nav .list .list-item {
   margin: 3rem 0;
   list-style: none;
 }
 
-.list-item a {
-  color: var(--light-gray);
+.nav .list .list-item a {
+  color: #000000;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  letter-spacing: 0.2rem;
+  font-family: "Moderat";
+  font-size: 2rem;
 }
 
-.list-item a:hover {
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: underline;
+.nav .mail-contact {
+  padding: 2rem 1rem;
+  font-family: "Moderat";
 }
 
-.list-item .btn {
-  width: 100%;
-  padding: 1rem 0;
-  font-size: 1.2rem;
-  color: var(--light-gray);
-  border: 2px var(--light-gray) solid;
-  background-color: transparent;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
+.nav .mail-contact span {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.nav .mail-contact p {
+  font-weight: 500;
+  font-size: 1.9rem;
 }
 
 @media (min-width: 750px) {
