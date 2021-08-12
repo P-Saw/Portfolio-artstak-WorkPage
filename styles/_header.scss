@@ -1,18 +1,15 @@
 // NAVBAR
-
-.navbar,
-.nav {
-  display: flex;
-  align-items: center;
-}
-
 .navbar {
-  background-color: $yellow;
   width: 100%;
   padding: 2rem 1rem 2rem 1rem;
   position: relative;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   .logo-text {
+    display: block;
+  }
+  .logo-only {
     display: none;
   }
 }
@@ -105,63 +102,67 @@
     }
     p {
       font-weight: 500;
-      font-size: 1.9rem;
+      font-size: 1.8rem;
     }
   }
 }
 
-@media (min-width: 750px) {
-  /* NAVBAR */
+//MEDIA TABLET
+@media (min-width: $breakpoint-tablet) {
+  header {
+    grid-column: 2/8;
+  }
+  // NAVBAR
   .navbar {
-    width: 90%;
-    max-width: 1400px;
-    margin: auto;
-    padding: 0;
-  }
-  .logo-text {
-    display: block;
-  }
-  .logo-only {
-    display: none;
-  }
-  .nav {
-    position: relative;
-    height: unset;
-    width: auto;
-    background: white;
-    transform: unset;
-    top: 0;
-  }
-  .list {
-    width: 100%;
+    padding: 2rem 0;
     margin: 0;
-    display: flex;
+    .logo-text {
+      display: block;
+    }
+    .logo-only {
+      display: none;
+    }
   }
-  .list-item {
-    margin: 1.5rem 0rem 1.5rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .list-item a {
-    color: var(--grayish-violet);
-    letter-spacing: 0.1rem;
-    font-size: 1rem;
-  }
-  .list-item .btn {
-    color: var(--dark-violet);
-    border: 2px var(--dark-violet) solid;
-    padding: 1rem 2rem;
-    letter-spacing: 0.1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-  }
-  .list-item .btn:hover {
-    background-color: var(--dark-violet);
-    color: var(--light-gray);
-  }
+  // MENU HAMBURGER
   .menu-hamburger {
     display: none;
+  }
+  // NAV LIST
+  .nav {
+    background: transparent;
+    flex-direction: row;
+    position: relative;
+    height: unset;
+    width: unset;
+    transform: unset;
+    top: 0;
+    .list {
+      padding: 0;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 1rem;
+      .list-item {
+        margin: 0;
+        a {
+          font-size: 1rem;
+        }
+      }
+      .list-item:first-child a {
+        background-color: $yellow;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        margin-left: 1.5rem;
+      }
+    }
+    .mail-contact {
+      display: none;
+    }
+  }
+}
+
+// MEDIA DESKTOP
+@media (min-width: $breakpoint-desktop) {
+  header {
+    grid-column: 3/13;
   }
 }
