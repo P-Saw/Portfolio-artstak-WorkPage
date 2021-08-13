@@ -3,7 +3,7 @@
 @import url(../fonts/MazzardFont/style.css);
 .navbar {
   width: 100%;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 1rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,14 +156,12 @@
 }
 
 @media (min-width: 768px) {
-  header {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 6;
-    grid-column: 2/8;
-  }
   .navbar {
     padding: 2rem 0;
     margin: 0;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 6;
+    grid-column: 2/8;
   }
   .navbar .logo-text {
     display: block;
@@ -215,11 +213,243 @@
   }
 }
 
-@media (min-width: 1440px) {
-  header {
+@media (min-width: 1024px) {
+  .navbar {
     -ms-grid-column: 3;
     -ms-grid-column-span: 10;
     grid-column: 3/13;
+  }
+}
+
+.client-info {
+  padding: 2rem 1rem;
+  border-top: 1px #d0d0d0 solid;
+}
+
+.info-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.info-container .info-box {
+  text-align: center;
+}
+
+.info-container .info-box span {
+  font-family: "Moderat";
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.info-container .info-box p {
+  font-family: "Moderat";
+  font-weight: 700;
+  font-size: 1.5rem;
+  white-space: pre-line;
+}
+
+.info-container .info-box:last-child {
+  grid-column: span 2;
+}
+
+.hero-images {
+  text-align: center;
+}
+
+.hero-images .phone-image {
+  margin-top: 2rem;
+}
+
+.phone-image-5,
+.phone-image-3,
+.phone-image-4 {
+  display: none;
+}
+
+.gradient-phone {
+  background: url(/images/heroPhones/Group.png) no-repeat center center, #de156c;
+  max-width: 219px;
+  height: 443px;
+  margin: 2rem auto 0 auto;
+  border-radius: 2rem;
+}
+
+.qr-card {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .phone-image-5,
+  .phone-image-3,
+  .phone-image-4 {
+    display: block;
+  }
+  .grid-col-1 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .hero-images {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(200px, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .client-info {
+    padding: 2rem 0;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 6;
+    grid-column: 2/8;
+  }
+  .info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .info-container .info-box {
+    text-align: left;
+  }
+  .info-container .info-box span {
+    font-size: 1rem;
+  }
+  .info-container .info-box p {
+    font-size: 1rem;
+    margin-top: 1.2rem;
+  }
+  .info-container .info-box:first-child {
+    -webkit-box-flex: 0.7;
+        -ms-flex-positive: 0.7;
+            flex-grow: 0.7;
+  }
+  .info-container .info-box:first-child p {
+    font-size: 2rem;
+    margin-top: 0.2rem;
+  }
+  .info-container .info-box:last-child {
+    grid-column: span 2;
+  }
+  .grid-col-1 {
+    margin-top: 16vw;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .grid-col-2 {
+    margin-top: 8vw;
+  }
+  .grid-col-4 {
+    margin-top: 16vw;
+  }
+  .grid-col-4 .gradient-phone {
+    max-width: 250px;
+    height: 52.3%;
+  }
+  .hero-images {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(auto, 250px))[4];
+        grid-template-columns: repeat(4, minmax(auto, 250px));
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 10px;
+  }
+  .hero-images .phone-image {
+    max-width: 250px;
+  }
+  .hero-images .phone-image img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .qr-card {
+    display: block;
+    margin: 10rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .qr-card .white-part {
+    width: 70%;
+  }
+  .qr-card .white-part img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .qr-card .pink-part {
+    margin-top: 7vw;
+    width: 30%;
+    height: 37vw;
+    background-color: #de156c;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 0 3rem 3rem 0;
+  }
+  .qr-card .pink-part .qr-code {
+    width: 60%;
+  }
+  .qr-card .pink-part .qr-code img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .qr-card .pink-part .qr-code .qr-info {
+    margin-top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: #ffffff;
+  }
+  .qr-card .pink-part .qr-code .qr-info span {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+  .qr-card .pink-part .qr-code .qr-info p {
+    font-family: "Mazzard";
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .client-info {
+    padding: 2rem 0;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 10;
+    grid-column: 3/13;
+  }
+}
+
+@media (min-width: 1440px) {
+  .info-container .info-box span,
+  .info-container .info-box p {
+    font-size: 1.2rem;
+  }
+  .info-container .info-box:first-child p {
+    font-size: 2.2rem;
   }
 }
 
@@ -247,13 +477,15 @@ body {
     display: grid;
     -ms-grid-columns: (1fr)[8];
         grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .content-wrapper {
     -ms-grid-columns: (1fr)[14];
         grid-template-columns: repeat(14, 1fr);
+    gap: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

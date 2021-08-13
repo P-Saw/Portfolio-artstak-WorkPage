@@ -1,0 +1,206 @@
+// CLIENT INFO
+.client-info {
+  padding: 2rem 1rem;
+  border-top: 1px $lineColor solid;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  .info-box {
+    text-align: center;
+    span {
+      font-family: $fontModerat;
+      font-weight: 300;
+      font-size: 1.4rem;
+    }
+    p {
+      font-family: $fontModerat;
+      font-weight: 700;
+      font-size: 1.5rem;
+      white-space: pre-line;
+    }
+    &:last-child {
+      grid-column: span 2;
+    }
+  }
+}
+
+// HERO IMAGES
+.hero-images {
+  text-align: center;
+  .phone-image {
+    margin-top: 2rem;
+  }
+}
+.phone-image-5,
+.phone-image-3,
+.phone-image-4 {
+  display: none;
+}
+.gradient-phone {
+  background: url(/images/heroPhones/Group.png) no-repeat center center, $pink;
+  max-width: 219px;
+  height: 443px;
+  margin: 2rem auto 0 auto;
+  border-radius: 2rem;
+}
+
+//QR CODE CARD
+.qr-card {
+  display: none;
+}
+@media (min-width: $breakpoint-mobile) {
+  // HERO IMAGES
+  .phone-image-5,
+  .phone-image-3,
+  .phone-image-4 {
+    display: block;
+  }
+
+  .grid-col-1 {
+    order: 4;
+  }
+
+  .hero-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  //CLIENT INFO
+  .client-info {
+    padding: 2rem 0;
+    grid-column: 2/8;
+  }
+
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    .info-box {
+      text-align: left;
+      span {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 1rem;
+        margin-top: 1.2rem;
+      }
+      &:first-child {
+        flex-grow: 0.7;
+        p {
+          font-size: 2rem;
+          margin-top: 0.2rem;
+        }
+      }
+      &:last-child {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  // HERO IMAGES
+  .grid-col-1 {
+    margin-top: 16vw;
+    order: 0;
+  }
+  .grid-col-2 {
+    margin-top: 8vw;
+  }
+  .grid-col-4 {
+    margin-top: 16vw;
+    .gradient-phone {
+      max-width: 250px;
+      height: 52.3%;
+    }
+  }
+  .hero-images {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 250px));
+    justify-content: space-between;
+    gap: 10px;
+    .phone-image {
+      max-width: 250px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  //QR CODE CARD
+  .qr-card {
+    display: block;
+    margin: 10rem 0;
+    display: flex;
+    .white-part {
+      width: 70%;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .pink-part {
+      margin-top: 7vw;
+      width: 30%;
+      height: 37vw;
+      background-color: $pink;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0 3rem 3rem 0;
+      .qr-code {
+        width: 60%;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+        .qr-info {
+          margin-top: 2rem;
+          display: flex;
+          justify-content: space-between;
+          color: $white;
+          span {
+            font-family: $fontSourceSans;
+            font-weight: 400;
+            font-size: 1.2rem;
+          }
+          p {
+            font-family: $fontMazzard;
+            font-weight: 700;
+            font-size: 2rem;
+            margin: 0.5rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-laptop) {
+  // CLIENT INFO
+  .client-info {
+    padding: 2rem 0;
+    grid-column: 3/13;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  // CLIENT INFO
+  .info-container {
+    .info-box {
+      span,
+      p {
+        font-size: 1.2rem;
+      }
+      &:first-child {
+        p {
+          font-size: 2.2rem;
+        }
+      }
+    }
+  }
+}

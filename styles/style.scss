@@ -1,5 +1,6 @@
 @import "./variables";
 @import "./header";
+@import "./client-info";
 
 *,
 *::before,
@@ -22,10 +23,12 @@ body {
   .content-wrapper {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
   }
 }
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-laptop) {
   .content-wrapper {
     grid-template-columns: repeat(14, 1fr);
+    gap: 20px;
   }
 }
