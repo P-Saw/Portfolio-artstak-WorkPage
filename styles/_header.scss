@@ -1,7 +1,7 @@
 // NAVBAR
 .navbar {
   width: 100%;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 1rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -109,13 +109,11 @@
 
 //MEDIA TABLET
 @media (min-width: $breakpoint-tablet) {
-  header {
-    grid-column: 2/8;
-  }
   // NAVBAR
   .navbar {
     padding: 2rem 0;
     margin: 0;
+    grid-column: 2/8;
     .logo-text {
       display: block;
     }
@@ -161,8 +159,8 @@
 }
 
 // MEDIA DESKTOP
-@media (min-width: $breakpoint-desktop) {
-  header {
+@media (min-width: $breakpoint-laptop) {
+  .navbar {
     grid-column: 3/13;
   }
 }
