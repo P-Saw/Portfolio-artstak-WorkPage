@@ -374,7 +374,7 @@
   }
   .qr-card {
     display: block;
-    margin: 10rem 0;
+    margin: 10rem auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -451,6 +451,66 @@
   .info-container .info-box:first-child p {
     font-size: 2.2rem;
   }
+  .qr-code {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.ticket-managment {
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+}
+
+.ticket-managment .slider-button {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background-color: #de156c;
+  border: none;
+  border-radius: 50%;
+}
+
+.ticket-managment .slider-button-left {
+  top: 50%;
+  left: 5%;
+}
+
+.ticket-managment .slider-button-right {
+  top: 50%;
+  right: 5%;
+}
+
+.slider-box {
+  height: 525px;
+}
+
+.slider-track {
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.slider-track .slide {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 2.5rem;
+  left: 0;
+  right: 0;
+}
+
+.slider-track .current-slide img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 *,
@@ -469,6 +529,10 @@ body {
 
 .scroll {
   overflow-y: hidden;
+}
+
+.content-wrapper {
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {

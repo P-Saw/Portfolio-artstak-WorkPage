@@ -134,7 +134,7 @@
   //QR CODE CARD
   .qr-card {
     display: block;
-    margin: 10rem 0;
+    margin: 10rem auto;
     display: flex;
     .white-part {
       width: 70%;
@@ -202,5 +202,9 @@
         }
       }
     }
+  }
+  .qr-code {
+    width: 90%;
+    margin: auto;
   }
 }

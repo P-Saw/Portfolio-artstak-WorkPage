@@ -1,0 +1,41 @@
+.ticket-managment {
+  position: relative;
+  grid-column: 1/15;
+  .slider-button {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: $pink;
+    border: none;
+    border-radius: 50%;
+  }
+  .slider-button-left {
+    top: 50%;
+    left: 5%;
+  }
+  .slider-button-right {
+    top: 50%;
+    right: 5%;
+  }
+}
+.slider-box {
+  height: 525px;
+}
+.slider-track {
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  .slide {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 2.5rem;
+    left: 0;
+    right: 0;
+  }
+  .current-slide img {
+    transform: scale(1.1);
+  }
+}

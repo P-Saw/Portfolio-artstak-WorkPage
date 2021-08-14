@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./header";
 @import "./client-info";
+@import "./ticket-managment";
 
 *,
 *::before,
@@ -19,6 +20,9 @@ body {
   overflow-y: hidden;
 }
 
+.content-wrapper {
+  overflow: hidden;
+}
 @media (min-width: $breakpoint-tablet) {
   .content-wrapper {
     display: grid;
