@@ -10,26 +10,79 @@ hamburgerBtn.addEventListener('click', () =>{
   body.classList.toggle('scroll');
 });
 
-// PHONE SLIDER
+//TICKET MANAGMENT PHONE SLIDER
 const sliderTrack = document.querySelector('.slider-track');
 const slides = document.querySelectorAll('.slide');
 const prevButton = document.querySelector('.slider-button-left');
 const nextButton = document.querySelector('.slider-button-right');
 
-// SET SLIDES POSITION
+// SET SLIDES INLINE POSITION
 let pixels = 0;
 for (i=0; i<slides.length; i++) {
   slides[i].style.transform = `translate(${pixels}px)`;
   pixels += 260;
-}
+};
 
-//NEXT SLIDE BUTTON
-nextButton.addEventListener('click', e => {
+//SETTING VARIABLES FOR AUTOSLIDE
+let directionFlag = false
+let slideCount = 0
+
+// FUNCTION MOVING SLIDER TO RIGHT
+function moveSliderRight(){
   const currentSlide = sliderTrack.querySelector('.current-slide');
-  const nextSlide = currentSlide.nextElementSibling;
-  const amountToMove = (nextSlide.firstElementChild.width) * nextSlide.dataset.multiply;
-  currentSlide.classList.remove('current-slide');
-  nextSlide.classList.add('current-slide');
+  // check if there is next image
+  if(currentSlide.nextElementSibling){
+    const nextSlide = currentSlide.nextElementSibling;
+    currentSlide.classList.remove('current-slide');
+    nextSlide.classList.add('current-slide');
+    // get 
+    const transformStyle = document.querySelector('.slider-track').style.transform;
+    const translateAmount = transformStyle.replace(/[^-?\d.]/g, '');
+    const amountToMove = translateAmount - 260;
+    sliderTrack.style.transform = `translate(${amountToMove}px)`;
+    //if statement to prevent fire multiple intervals by clicking buttons
+    if(slideCount < 4){
+      slideCount++;
+    }
+    if(slideCount == 4){
+      clearInterval(right);
+      directionFlag = true;
+      autoslide();
+    }
+}}
 
-  sliderTrack.style.transform = `translate(-${amountToMove}px)`
-})
+// FUNCTION MOVING SLIDER TO LEFT
+function moveSliderLeft(){
+  const currentSlide = sliderTrack.querySelector('.current-slide');
+    // check if there is previous image
+  if(currentSlide.previousElementSibling){
+    const prevSlide = currentSlide.previousElementSibling;
+    currentSlide.classList.remove('current-slide');
+    prevSlide.classList.add('current-slide');
+    const transformStyle = document.querySelector('.slider-track').style.transform;
+    const translateAmount = transformStyle.replace(/[^-?\d.]/g, '');
+    const amountToMove = parseInt(translateAmount) + 260;
+    sliderTrack.style.transform = `translate(${amountToMove}px)`;
+    if(slideCount > 0){
+      slideCount--;
+    }
+    if(slideCount == 0){
+      clearInterval(left);
+      directionFlag = false;
+      autoslide();
+    }
+}}
+
+// AUTO SLIDING
+function autoslide() {
+  if (!directionFlag){
+    right = setInterval(moveSliderRight, 3000);
+  }else if(directionFlag){
+    left = setInterval(moveSliderLeft, 3000);
+  }
+};
+autoslide();
+
+//SLIDER BUTTONS FOR SMALLER SCREENS
+prevButton.addEventListener('click', moveSliderLeft);
+nextButton.addEventListener('click', moveSliderRight);

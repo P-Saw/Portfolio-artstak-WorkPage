@@ -121,6 +121,7 @@
 .nav.nav-open {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+  z-index: 200;
 }
 
 .nav .list {
@@ -224,6 +225,7 @@
 .client-info {
   padding: 2rem 1rem;
   border-top: 1px #d0d0d0 solid;
+  border-bottom: 1px #d0d0d0 solid;
 }
 
 .info-container {
@@ -464,6 +466,14 @@
   grid-column: 1/15;
 }
 
+.ticket-managment p {
+  font-family: "Moderat";
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
 .ticket-managment .slider-button {
   position: absolute;
   width: 3rem;
@@ -471,11 +481,14 @@
   background-color: #de156c;
   border: none;
   border-radius: 50%;
+  color: white;
+  font-weight: bold;
 }
 
 .ticket-managment .slider-button-left {
   top: 50%;
   left: 5%;
+  z-index: 10;
 }
 
 .ticket-managment .slider-button-right {
@@ -493,6 +506,10 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
 .slider-track .slide {
@@ -511,6 +528,27 @@
 .slider-track .current-slide img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+@media (min-width: 768px) {
+  .ticket-managment p {
+    text-align: left;
+    font-size: 2rem;
+    margin-left: 12vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider-button {
+    display: none;
+  }
+  .ticket-managment p {
+    margin-left: 14.4vw;
+  }
 }
 
 *,
@@ -531,7 +569,7 @@ body {
   overflow-y: hidden;
 }
 
-.content-wrapper {
+main {
   overflow: hidden;
 }
 
