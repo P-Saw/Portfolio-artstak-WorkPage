@@ -1,0 +1,82 @@
+.our-tool {
+  margin: 2rem 1rem;
+  padding: 1rem 0;
+  text-align: center;
+  font-family: $fontModerat;
+  background-color: $white;
+  border-radius: 3rem;
+  .tool-info {
+    padding: 2rem;
+  }
+  .figma {
+    font-size: 1.3rem;
+    font-weight: 300;
+    .bold {
+      font-weight: 500;
+    }
+  }
+  p {
+    font-weight: 300;
+    color: $grayPharagraph;
+    line-height: 1.3rem;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .our-tool {
+    padding: 3rem 5rem;
+    grid-column: 2/8;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 0;
+    text-align: left;
+    .tool-info {
+      padding: 0;
+    }
+    img {
+      max-width: 60%;
+      max-height: 60%;
+    }
+    p {
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-laptop) {
+  .our-tool {
+    grid-column: 3/13;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .our-tool {
+    padding: 4rem 8rem;
+  }
+}
+
+//BACKGROUND 1
+.background-1 {
+  margin-top: 5rem;
+  height: 400px;
+  background: url(../images/background1.png) no-repeat center center/cover;
+  img {
+    display: none;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .background-1 {
+    height: 600px;
+    background: url(../images/background1.png) no-repeat top center/cover;
+    grid-column: 1/9;
+  }
+}
+
+@media (min-width: $breakpoint-laptop) {
+  .background-1 {
+    height: 800px;
+    grid-column: 1/15;
+  }
+}

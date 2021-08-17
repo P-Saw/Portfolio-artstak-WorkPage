@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Artstak Work Page</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/style.css">
-        <script src="script.js" defer></script>
-    </head>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Artstak Work Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="charts.js" defer></script>
+</head>
+
 <body>
   <header>
     <div class="content-wrapper">
@@ -48,7 +52,7 @@
             <span>Location</span>
             <p>Las Vegas, NV</p>
           </div>
-          <div class="info-box"">
+          <div class=" info-box"">
             <span>Industry</span>
             <p>E-commerce</p>
           </div>
@@ -56,7 +60,7 @@
             <span>Company Size</span>
             <p>1-100 Employees</p>
           </div>
-          <div class="info-box"">
+          <div class=" info-box"">
             <span>What we Delivered</span>
             <p>Product Design
               UX/UI Design
@@ -89,10 +93,10 @@
               <img src="./images/heroPhones/iPhone 12 Pro-3.png" alt="">
             </div>
           </div>
-            <div class="grid-col-4">
-              <div class="gradient-phone">
-              </div>
+          <div class="grid-col-4">
+            <div class="gradient-phone">
             </div>
+          </div>
         </div>
         <div class="qr-card">
           <div class="white-part">
@@ -121,29 +125,176 @@
       </section>
       <div class="ticket-managment">
         <p>Ticket Managment</p>
-          <div class="slider-box">
-            <ul class="slider-track">
-              <li data-nextnr="1" data-prevnr="1" class="slide current-slide">
-                <img class="slide-image" src="./images/sliderPhones/iPhone 12 Pro (2).png" alt="">
-              </li>
-              <li data-nextnr="1" data-prevnr="1" class="slide">
-                <img class="slide-image" src="./images/sliderPhones/iPhone 12 Pro (3).png" alt="">
-              </li>
-              <li data-nextnr="2" data-prevnr="2" class="slide">
-                <img class="slide-image" src="./images/sliderPhones/iPhone 12 Pro.png" alt="">
-              </li>
-              <li data-nextnr="3" data-prevnr="1" class="slide">
-                <img class="slide-image" src="./images/sliderPhones/iPhone 12 Pro-2.png" alt="">
-              </li>
-              <li data-nextnr="4" data-prevnr="1" class="slide">
-                <img class="slide-image" src="./images/sliderPhones/iPhone 12 Pro-3.png" alt="">
-              </li>
-            </ul>
-          </div>
-        <button class="slider-button slider-button-left"><</button>
-        <button class="slider-button slider-button-right">></button>
+        <div class="slider-box">
+          <ul class="slider-track">
+            <li data-nextnr="1" data-prevnr="1" class="slide current-slide">
+              <img class="slide-image" src="./images/sliderPhones/iPhone 12 Pro (2).png" alt="">
+            </li>
+            <li data-nextnr="1" data-prevnr="1" class="slide">
+              <img class="slide-image" src="./images/sliderPhones/iPhone 12 Pro (3).png" alt="">
+            </li>
+            <li data-nextnr="2" data-prevnr="2" class="slide">
+              <img class="slide-image" src="./images/sliderPhones/iPhone 12 Pro.png" alt="">
+            </li>
+            <li data-nextnr="3" data-prevnr="1" class="slide">
+              <img class="slide-image" src="./images/sliderPhones/iPhone 12 Pro-2.png" alt="">
+            </li>
+            <li data-nextnr="4" data-prevnr="1" class="slide">
+              <img class="slide-image" src="./images/sliderPhones/iPhone 12 Pro-3.png" alt="">
+            </li>
+          </ul>
+        </div>
+        <button class="slider-button slider-button-left">
+          << /button>
+            <button class="slider-button slider-button-right">></button>
       </div>
+      <div class="our-tool">
+        <img src="./images/figmaLogo.png" alt="">
+        <div class="tool-info">
+          <span class="figma">Our tool of choice: <span class="bold">Figma</span></span>
+          <p>
+            We're all about collaboration and ease of communication between our team members. That's why we chose Figma
+            to help us create this lenghty project multiple designers and developers brought to life.
+          </p>
+        </div>
+      </div>
+      <div class="background-1">
+      </div>
+      <div class="key-features kf-1">
+        <h2>Key Features</h2>
+        <div class="key-text-card discover">
+          <span>Before Event</span>
+          <h3>Discover</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In labore quaerat recusandae aliquid pariatur</p>
+        </div>
+      </div>
+      <div class="background-2">
+      </div>
+      <div class="key-features kf-2">
+        <div class="key-content-container">
+          <div class="key-text-card">
+            <span>Before Event</span>
+            <h3>LuvSeats 360°</h3>
+            <p>Users get a 360 degree view from the seat before they buy with LuvSeats 360.</p>
+            <div class="icons">
+              <div><img class="shadow" src="./images/360icon1.png" alt=""></div>
+              <div><img src="./images/360icon2.png" alt=""></div>
+              <img src="./images/plusminus1.png" alt="">
+            </div>
+          </div>
+          <div class="luv-img mg-top-3">
+            <img src="./images/iPhone 12 Pro 360.png" alt="">
+          </div>
+        </div>
+        <div class="key-content-container to-left">
+          <div class="key-text-card">
+            <span>In-Game</span>
+            <h3>Lens View</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo quasi inventore quaerat earum maxime
+              obcaecati unde, ab sunt cupiditate eaque</p>
+          </div>
+          <div class="lens-img mg-top-3">
+            <img class="lens-mobile-img" src="./images/LensViewMobile.png" alt="">
+            <img class="lens-desktop-img" src="./images/LensView.png" alt="">
+          </div>
+        </div>
+        <div class="key-content-container">
+          <div class="key-text-card">
+            <span>In-Game</span>
+            <h3>Map & List View</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo quasi inventore quaerat earum maxime
+              obcaecati unde, ab sunt</p>
+          </div>
+          <div class="map-img mg-top-3">
+            <img class="map-mobile-img" src="./images/Map&ListMobile.png" alt="">
+            <img class="map-desktop-img" src="./images/Map&List.png" alt="">
+          </div>
+        </div>
+        <div class="key-content-container">
+          <div class="key-text-card">
+            <span>Tracking</span>
+            <h3>Easily monitor your listings</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo quasi inventore quaerat earum maxime
+              obcaecati unde, ab sunt</p>
+          </div>
+          <div class="monitor-img mg-top-3">
+            <div class="chart-card">
+              <div class="chart-image">
+                <div class="chart-dots">...</div>
+                <div class="chart-info">
+                  <div class="date">
+                    <span>SEP 10</span>
+                  </div>
+                  <div class="pers-info">
+                    <p class="name">Leon Bridges</p>
+                    <p class="place">Aztec Theatre - San Antonio, TX</p>
+                  </div>
+                </div>
+              </div>
+              <div class="seat-info">
+                <div class="chart-info-box">
+                  <span class="chart-bold">111</span>
+                  <span class="chart-light">Section</span>
+                </div>
+                <div class="chart-info-box">
+                  <span class="chart-bold">B</span>
+                  <span class="chart-light">Row</span>
+                </div>
+                <div class="chart-info-box">
+                  <span class="chart-bold">9,10</span>
+                  <span class="chart-light">Seat(s)</span>
+                </div>
+              </div>
+              <div class="ticket-info">
+                <div class="chart-info-box">
+                  <span class="chart-bold">$228,00</span>
+                  <span class="chart-light">Price per ticket</span>
+                </div>
+                <div class="ticket-icon">
+                  <img src="./images/ticketIcon.png" alt="">
+                  <span class="chart-bold">x2</span>
+                </div>
+              </div>
+              <div class="chart-container">
+                <canvas id="myChart"></canvas>
+              </div>
+              <p class="chart-undercomment">46% higher than last month</p>
+            </div>
+            <img src="./images/ListingsPhone.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="key-content-container to-left charts">
+        <div class="key-text-card">
+          <span>Tracking</span>
+          <h3>Map & List View</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo quasi inventore quaerat earum maxime
+            obcaecati unde, ab sunt</p>
+        </div>
+        <div class="four-charts-container">
+          <div class="chart-box1">
+            <div class="chart light-shadow">
+              <canvas id="myChart1"></canvas>
+            </div>
+            <div class="chart light-shadow">
+              <canvas id="myChart2"></canvas>
+              <p class="chart-undercomment">61% of last months earnings</p>
+            </div>
+          </div>
+          <div class="chart-box2">
+            <div class="chart mid-shadow">
+              <canvas id="myChart3"></canvas>
+              <p class="chart-undercomment">89% higher than last month</p>
+            </div>
+            <div class="chart blurry mid-shadow">
+              <canvas id="myChart4"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="background3"></div>
     </div>
   </main>
 </body>
+
 </html>

@@ -1,6 +1,6 @@
 .ticket-managment {
   position: relative;
-  grid-column: 1/15;
+  margin-bottom: 5rem;
   p {
     font-family: "Moderat";
     font-weight: 700;
@@ -53,17 +53,23 @@
 }
 
 @media (min-width: $breakpoint-tablet) {
-  .ticket-managment p {
-    text-align: left;
-    font-size: 2rem;
-    margin-left: 12vw;
+  .ticket-managment {
+    grid-column: 1/9;
+    p {
+      text-align: left;
+      font-size: 2rem;
+      margin-left: 12vw;
+    }
   }
 }
 @media (min-width: $breakpoint-laptop) {
   .slider-button {
     display: none;
   }
-  .ticket-managment p {
-    margin-left: 14.4vw;
+  .ticket-managment {
+    grid-column: 1/15;
+    p {
+      margin-left: 14.4vw;
+    }
   }
 }
