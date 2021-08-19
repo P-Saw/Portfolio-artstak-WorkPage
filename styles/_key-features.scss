@@ -66,12 +66,27 @@
 }
 // MAP&LIST VIEW IMAGES
 .map-img {
+  margin: auto;
+  max-width: 400px;
+  position: relative;
   .map-desktop-img {
     display: none;
   }
   img {
     width: 100%;
     max-width: 400px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: $pink;
+    border: 2px $white solid;
+    border-radius: 50%;
+    left: 80%;
+    top: 58%;
+    animation: pulse 2s linear infinite;
   }
 }
 // MONITOR IMAGE & CHART CARD
@@ -82,7 +97,7 @@
   }
   .chart-card {
     position: absolute;
-    right: 20%;
+    right: 13%;
     width: 227px;
     height: 481px;
     background-color: $white;
@@ -234,10 +249,18 @@
   }
 }
 
+//BACKGROUND 3
+.background-3 {
+  margin-top: 5rem;
+  height: 400px;
+  background: url(../images/background2.png) no-repeat center center/cover;
+}
+
 @media (min-width: $breakpoint-mobile) {
   .four-charts-container {
     flex-direction: row;
     justify-content: center;
+    gap: 1rem;
   }
 }
 
@@ -312,7 +335,7 @@
     margin: 0;
     display: flex;
     align-items: unset;
-    gap: 30px;
+    gap: 2rem;
     transform: skew(-20deg, 0deg) rotateZ(15deg) scaleY(0.8);
     margin-left: -200px;
     .chart-box2 {
@@ -331,6 +354,13 @@
         backdrop-filter: blur(1.5px);
       }
     }
+  }
+
+  //BACKGROUND 3
+  .background-3 {
+    height: 600px;
+    background: url(../images/background2.png) no-repeat top center/cover;
+    grid-column: 1/9;
   }
 }
 
@@ -357,7 +387,7 @@
   }
   // MAP IMAGES
   .map-img {
-    position: relative;
+    max-width: unset;
     .map-desktop-img {
       display: block;
     }
@@ -368,11 +398,8 @@
       max-width: unset;
     }
     &::after {
-      content: "";
-      position: absolute;
-      border: 5px $pink solid;
       left: 30%;
-      top: 50%;
+      top: 56%;
     }
   }
 
@@ -390,10 +417,17 @@
   .four-charts-container {
     margin-left: 0;
     transform: skew(-20deg, 0deg) rotateZ(15deg) translateX(40px) scaleY(0.8);
+    gap: 4rem;
     .chart {
       height: 300px;
       width: 300px;
     }
+  }
+
+  //BACKGROUND 3
+  .background-3 {
+    height: 800px;
+    grid-column: 1/15;
   }
 }
 

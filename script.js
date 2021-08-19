@@ -89,3 +89,26 @@ autoslide();
 //SLIDER BUTTONS FOR SMALLER SCREENS
 prevButton.addEventListener("click", moveSliderLeft);
 nextButton.addEventListener("click", moveSliderRight);
+
+//USER FLOW ROADMAP
+
+function CheckNext() {
+  const inputs = document.querySelectorAll('input[type="radio"]');
+  const images = document.querySelectorAll(".user-phone-image");
+  for (let i = 0; i < inputs.length; i++) {
+    if (inputs[i].checked == true) {
+      if (i == inputs.length - 1) {
+        inputs[0].checked = true;
+        images[4].classList.remove("active");
+        images[0].classList.add("active");
+      } else {
+        inputs[i + 1].checked = true;
+        images[i].classList.remove("active");
+        images[i + 1].classList.add("active");
+      }
+      break;
+    }
+  }
+}
+
+setInterval(CheckNext, 4000);

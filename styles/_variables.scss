@@ -30,3 +30,22 @@ $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
 $breakpoint-laptop: 1024px;
 $breakpoint-desktop: 1440px;
+
+//animation
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 $pink;
+  }
+
+  25% {
+    box-shadow: 0 0 0 10px $pink;
+  }
+
+  50% {
+    box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}

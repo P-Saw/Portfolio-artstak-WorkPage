@@ -1,0 +1,196 @@
+.process {
+  font-family: $fontModerat;
+  margin-top: 5rem;
+  text-align: center;
+  h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  p {
+    font-size: 1.125rem;
+    font-weight: 300;
+    padding: 1rem;
+    margin: 0;
+  }
+  .process-card {
+    background-color: $white;
+    border-radius: 30px;
+    max-width: 270px;
+    margin: auto;
+    h3 {
+      font-size: 1.9rem;
+      margin-bottom: 0;
+      padding-top: 2rem;
+      color: $componentsText;
+    }
+    p {
+      font-size: 1.125rem;
+      color: $componentsGrayText;
+    }
+    .icons {
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+//PROGRESS BARS
+.progress-bar {
+  display: none;
+}
+
+//TRANSITION PHONES
+.transition-mobile {
+  margin: 4rem auto;
+  max-width: 300px;
+}
+.transition-desktop {
+  display: none;
+}
+
+//USER FLOW ROADMAP
+.user-flow {
+  margin-top: 5rem;
+  border-top: 1px $lineColor solid;
+  z-index: 1;
+  position: relative;
+  h2 {
+    margin: 0;
+    text-align: center;
+  }
+  .roadmap-container {
+    z-index: 1;
+    padding: 3rem 0;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    .roadmap {
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      label {
+        font-size: 0.8rem;
+        position: relative;
+        width: 100%;
+        min-width: 100px;
+        max-width: 220px;
+        display: block;
+        background: $white;
+        color: black;
+        border-radius: 2rem;
+        margin: 2rem auto;
+        padding: 20px 10px;
+        border: 1px $lineColor solid;
+        &:not(:last-child)::after {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: 70px;
+          background-color: $lineColor;
+          left: 50%;
+          bottom: -70px;
+        }
+      }
+      input {
+        display: none;
+        &:checked + label {
+          background-color: $pink;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+.user-phone-image {
+  display: none;
+  width: 100%;
+}
+.active {
+  display: block;
+}
+.background-pink {
+  position: absolute;
+  background-color: $pink;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(60%);
+}
+
+@media (min-width: $breakpoint-mobile) {
+  //PROGRESS BARS
+  .progress-bar {
+    display: block;
+    margin: 10rem 1rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  //TRANSITION PHONES
+  .transition-desktop {
+    display: block;
+  }
+  .transition-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .process {
+    grid-column: 2/8;
+    h2 {
+      font-size: 3.125rem;
+    }
+    p {
+      margin: auto;
+      width: 60%;
+    }
+    .process-card-container {
+      display: flex;
+      flex-wrap: wrap;
+      .process-card {
+        margin-top: 2rem;
+        max-width: 300px;
+      }
+    }
+  }
+
+  //USER FLOW ROADMAP
+  .user-flow {
+    h2 {
+      text-align: left;
+    }
+    .roadmap-container {
+      padding: 5rem 0;
+      margin: 0;
+      .roadmap {
+        flex-basis: 60%;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-laptop) {
+  .process {
+    grid-column: 3/13;
+    .process-card-container {
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .process .process-card-container {
+    flex-wrap: nowrap;
+    .process-card {
+      max-width: 300px;
+    }
+  }
+}

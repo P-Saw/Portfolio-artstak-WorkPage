@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src='https://cdn.jsdelivr.net/npm/jquery-anyimagecomparisonslider-plugin' defer></script>
   <script src="script.js" defer></script>
   <script src="charts.js" defer></script>
 </head>
@@ -145,8 +146,9 @@
           </ul>
         </div>
         <button class="slider-button slider-button-left">
-          << /button>
-            <button class="slider-button slider-button-right">></button>
+          < </button>
+            <button class="slider-button slider-button-right">
+              > </button>
       </div>
       <div class="our-tool">
         <img src="./images/figmaLogo.png" alt="">
@@ -160,17 +162,17 @@
       </div>
       <div class="background-1">
       </div>
-      <div class="key-features kf-1">
+      <section class="key-features kf-1">
         <h2>Key Features</h2>
         <div class="key-text-card discover">
           <span>Before Event</span>
           <h3>Discover</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In labore quaerat recusandae aliquid pariatur</p>
         </div>
-      </div>
+      </section>
       <div class="background-2">
       </div>
-      <div class="key-features kf-2">
+      <section class="key-features kf-2">
         <div class="key-content-container">
           <div class="key-text-card">
             <span>Before Event</span>
@@ -263,7 +265,7 @@
             <img src="./images/ListingsPhone.png" alt="">
           </div>
         </div>
-      </div>
+      </section>
       <div class="key-content-container to-left charts">
         <div class="key-text-card">
           <span>Tracking</span>
@@ -292,7 +294,103 @@
           </div>
         </div>
       </div>
-      <div class="background3"></div>
+      <div class="background-3">
+      </div>
+      <section class="process">
+        <h2>Process</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+        <div class="process-card-container">
+          <div class="process-card">
+            <h3>Strategy</h3>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <div class="icons">
+              <img src="./images/cardIcons/image92.png" alt="">
+              <img src="./images/cardIcons/image93.png" alt="">
+              <img src="./images/cardIcons/image94.png" alt="">
+              <img src="./images/cardIcons/image95.png" alt="">
+            </div>
+          </div>
+          <div class="process-card">
+            <h3>Immersion</h3>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <div class="icons">
+              <img src="./images/cardIcons/image92.png" alt="">
+              <img src="./images/cardIcons/image93.png" alt="">
+              <img src="./images/cardIcons/image94.png" alt="">
+              <img src="./images/cardIcons/image95.png" alt="">
+            </div>
+          </div>
+          <div class="process-card">
+            <h3>UX/UI</h3>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <div class="icons">
+              <img src="./images/cardIcons/image92.png" alt="">
+              <img src="./images/cardIcons/image93.png" alt="">
+              <img src="./images/cardIcons/image94.png" alt="">
+              <img src="./images/cardIcons/image95.png" alt="">
+            </div>
+          </div>
+          <div class="process-card">
+            <h3>Testing</h3>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <div class="icons">
+              <img src="./images/cardIcons/image92.png" alt="">
+              <img src="./images/cardIcons/image93.png" alt="">
+              <img src="./images/cardIcons/image94.png" alt="">
+              <img src="./images/cardIcons/image95.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <img src="./images/MainCharts.png" alt="">
+        </div>
+        <div id="aics-autostart" class="transition-desktop" data-interactive="false" data-auto-animation-speed="8"
+          data-auto-animation-pause="1" data-auto-animation-easing="inOutSine">
+          <div class="images">
+            <div class="image-rgt" data-src="./images/transitionPhones/PhonesBefore.png"></div>
+            <div class="image-lft" data-src="./images/transitionPhones/PhonesAfter.png""></div>
+          </div>
+        </div>
+        <div id=" aics-autostart" class="transition-mobile" data-interactive="false" data-auto-animation-speed="8"
+              data-auto-animation-pause="1" data-auto-animation-easing="inOutSine">
+              <div class="images">
+                <div class="image-rgt" data-src="./images/transitionPhones/mobileBefore.png">
+                </div>
+                <div class="image-lft" data-src="./images/transitionPhones/mobileAfter.png"">
+            </div>
+          </div>
+        </div>
+        <div class = " user-flow">
+                  <h2>User Flow</h2>
+                  <div class="roadmap-container">
+                    <div class="roadmap">
+                      <input type="radio" id="event-screen" name="user-flow" value="event-screen" disabled checked>
+                      <label for="event-screen" disabled>Event Screen</label>
+
+                      <input type="radio" id="buy-ticket" name="user-flow" value="buy-ticket" disabled>
+                      <label for="buy-ticket" disabled>Buy Ticket</label>
+
+                      <input type="radio" id="check-out" name="user-flow" value="check-out" disabled>
+                      <label for="check-out" disabled>Check Out</label>
+
+                      <input type="radio" id="purchase" name="user-flow" value="purchase" disabled>
+                      <label for="purchase" disabled>Purchase Confirmed</label>
+
+                      <input type="radio" id="my-ticket" name="user-flow" value="my-ticket" disabled>
+                      <label for="my-ticket" disabled>My Tickets</label>
+
+                    </div>
+                    <div class="user-flow-phone">
+                      <img class="user-phone-image active" src="./images/roadmapPhones/Event screen.png" alt="">
+                      <img class="user-phone-image" src="./images/roadmapPhones/Buy tickets.png" alt="">
+                      <img class="user-phone-image" src="./images/roadmapPhones/Check out.png" alt="">
+                      <img class="user-phone-image" src="./images/roadmapPhones/Purchase confirmed.png" alt="">
+                      <img class="user-phone-image" src="./images/roadmapPhones/My tickets 1.png" alt="">
+                    </div>
+                  </div>
+                  <div class="background-pink"></div>
+                </div>
+      </section>
     </div>
   </main>
 </body>
