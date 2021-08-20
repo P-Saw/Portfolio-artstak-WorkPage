@@ -12,12 +12,10 @@
   .info-box {
     text-align: center;
     span {
-      font-family: $fontModerat;
       font-weight: 300;
       font-size: 1.4rem;
     }
     p {
-      font-family: $fontModerat;
       font-weight: 700;
       font-size: 1.5rem;
       white-space: pre-line;
@@ -41,11 +39,27 @@
   display: none;
 }
 .gradient-phone {
-  background: url(/images/heroPhones/Group.png) no-repeat center center, $pink;
+  position: relative;
+  background: linear-gradient(
+    218deg,
+    rgba(222, 21, 108, 1) 0%,
+    rgba(245, 112, 51, 1) 35%,
+    rgba(222, 21, 108, 1) 64%,
+    rgba(245, 112, 51, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 300%;
   max-width: 219px;
   height: 443px;
   margin: 2rem auto 0 auto;
   border-radius: 2rem;
+  animation: gradientAnimation 15s infinite alternate linear;
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 //QR CODE CARD
@@ -148,11 +162,20 @@
       margin-top: 7vw;
       width: 30%;
       height: 37vw;
-      background-color: $pink;
+      background: linear-gradient(
+        218deg,
+        rgba(222, 21, 108, 1) 0%,
+        rgba(245, 112, 51, 1) 23%,
+        rgba(222, 21, 108, 1) 64%,
+        rgba(245, 112, 51, 1) 100%
+      );
+      background-repeat: no-repeat;
+      background-size: 300%;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 0 3rem 3rem 0;
+      animation: gradientAnimation 15s infinite alternate linear;
       .qr-code {
         width: 60%;
         img {

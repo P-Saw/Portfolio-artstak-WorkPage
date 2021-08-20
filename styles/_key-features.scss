@@ -2,7 +2,6 @@
 .key-features {
   text-align: center;
   margin: 3rem 1rem;
-  font-family: $fontModerat;
   h2 {
     font-size: 2.2rem;
   }
@@ -76,17 +75,28 @@
     width: 100%;
     max-width: 400px;
   }
-  &::after {
+  .pulsating-dot {
     content: "";
     position: absolute;
-    width: 15px;
-    height: 15px;
     background-color: $pink;
-    border: 2px $white solid;
     border-radius: 50%;
+    border: 2px $white solid;
+    width: 16px;
+    height: 16px;
     left: 80%;
     top: 58%;
-    animation: pulse 2s linear infinite;
+    &::after {
+      content: "";
+      position: absolute;
+      border: 4px $pink solid;
+      border-radius: 50%;
+      top: -10px;
+      left: -10px;
+      width: 32px;
+      height: 32px;
+      opacity: 0;
+      animation: pulseAnimation 1.5s linear infinite;
+    }
   }
 }
 // MONITOR IMAGE & CHART CARD
@@ -397,9 +407,8 @@
     img {
       max-width: unset;
     }
-    &::after {
+    .pulsating-dot {
       left: 30%;
-      top: 56%;
     }
   }
 

@@ -2,11 +2,13 @@
 const hamburgerBtn = document.querySelector(".menu-hamburger");
 const nav = document.querySelector(".nav");
 const body = document.querySelector("body");
+const logoText = document.querySelector(".logo-text");
 
 hamburgerBtn.addEventListener("click", () => {
   hamburgerBtn.classList.toggle("open");
   nav.classList.toggle("nav-open");
   body.classList.toggle("scroll");
+  logoText.classList.toggle("slide-in");
 });
 
 //TICKET MANAGMENT PHONE SLIDER
@@ -112,3 +114,17 @@ function CheckNext() {
 }
 
 setInterval(CheckNext, 4000);
+
+// SCROLL TO TOP BUTTON
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+const scrollDiv = document.querySelector(".scroll-to-top");
+
+scrollDiv.addEventListener("click", scrollToTop);
+window.addEventListener("scroll", function () {
+  scrollDiv.classList.toggle("top-active", window.scrollY > 1000);
+});

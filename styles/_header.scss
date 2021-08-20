@@ -6,11 +6,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .logo-text {
-    display: block;
-  }
-  .logo-only {
-    display: none;
+  .logo {
+    display: flex;
+    align-items: center;
+    .logo-text {
+      transform: translateX(-300%);
+      transition: transform 0.4s ease-in;
+    }
+    .slide-in {
+      transform: translateX(0%);
+    }
   }
 }
 
@@ -87,23 +92,27 @@
       margin: 3rem 0;
       list-style: none;
       a {
+        border: 1px transparent solid;
         color: $black;
         text-decoration: none;
-        font-family: $fontModerat;
         font-size: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        &:hover {
+          border: 1px black solid;
+        }
       }
     }
   }
   .mail-contact {
-    padding: 2rem 1rem;
-    font-family: $fontModerat;
+    padding: 2rem 0rem 2rem 3rem;
     span {
       font-weight: 300;
       font-size: 1rem;
     }
     p {
       font-weight: 500;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
 }
@@ -115,11 +124,10 @@
     padding: 2rem 0;
     margin: 0;
     grid-column: 2/8;
-    .logo-text {
-      display: block;
-    }
-    .logo-only {
-      display: none;
+    .logo {
+      .logo-text {
+        transform: translateX(0%);
+      }
     }
   }
   // MENU HAMBURGER

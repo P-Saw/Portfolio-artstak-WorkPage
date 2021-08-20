@@ -1,5 +1,4 @@
 .process {
-  font-family: $fontModerat;
   margin-top: 5rem;
   text-align: center;
   h2 {
@@ -43,6 +42,7 @@
 .transition-mobile {
   margin: 4rem auto;
   max-width: 300px;
+  text-align: center;
 }
 .transition-desktop {
   display: none;
@@ -122,6 +122,126 @@
   transform: translateX(60%);
 }
 
+// TYPOGRAPHY
+.typography {
+  position: relative;
+  z-index: 1;
+  margin: 5rem 0;
+  .font-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .mazzard {
+    margin-top: 3rem;
+    font-family: $fontMazzard;
+    .font-name p {
+      flex: 1 1 50%;
+      font-size: 70px;
+      padding: 0;
+    }
+    .font-sizes {
+      flex: 1 1 50%;
+    }
+    .large-header {
+      font-size: 42px;
+      font-weight: 700;
+    }
+    .header1 {
+      font-size: 34px;
+    }
+    .header2 {
+      font-size: 28px;
+    }
+    .font-button {
+      font-size: 22px;
+    }
+    .title1 {
+      font-size: 20px;
+    }
+    .title2 {
+      font-size: 17px;
+    }
+    .title3 {
+      font-size: 16px;
+    }
+  }
+  .source {
+    font-family: $fontSourceSans;
+    .font-name p {
+      flex: 1 1 50%;
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .pharagraph1 {
+      font-size: 20px;
+    }
+    .pharagraph2 {
+      font-size: 16px;
+    }
+    .pharagraph3 {
+      font-size: 14px;
+    }
+  }
+  .background-heart {
+    position: absolute;
+    background: url(../images/roadMapBg.png) no-repeat center left;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(-20%);
+  }
+}
+
+.mockup {
+  grid-column: 1/9;
+  padding: 4rem 1rem;
+  background-color: $pink;
+  .mockup-container {
+    border-top: 1px $white solid;
+    color: $white;
+    grid-column: 2/8;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+.the-app {
+  grid-column: 1/9;
+  padding: 1rem;
+  background-color: $theAppBg;
+  .the-app-container {
+    color: $white;
+    grid-column: 2/8;
+  }
+  .the-app-image {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    margin-top: -4rem;
+  }
+  .the-app-card {
+    text-align: center;
+    margin-top: 2rem;
+    span {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    h3 {
+      font-size: 2.625rem;
+    }
+    p {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.app-desktop {
+  display: none;
+}
+
 @media (min-width: $breakpoint-mobile) {
   //PROGRESS BARS
   .progress-bar {
@@ -174,6 +294,107 @@
       }
     }
   }
+
+  // TYPOGRAPHY
+  .typography {
+    text-align: left;
+    .font-container {
+      margin-top: 4rem;
+      flex-direction: row;
+    }
+    .mazzard {
+      margin-top: 3rem;
+      font-family: $fontMazzard;
+      p {
+        margin: 0;
+        font-weight: 700;
+      }
+      .font-name {
+        flex-basis: 50%;
+      }
+      .font-sizes p {
+        width: unset;
+        .large-header {
+          font-size: 42px;
+          font-weight: 700;
+        }
+        .header1 {
+          font-size: 34px;
+        }
+        .header2 {
+          font-size: 28px;
+        }
+        .font-button {
+          font-size: 22px;
+        }
+        .title1 {
+          font-size: 20px;
+        }
+        .title2 {
+          font-size: 17px;
+        }
+        .title3 {
+          font-size: 16px;
+        }
+      }
+    }
+    .source {
+      font-family: $fontSourceSans;
+      .font-name {
+        flex-basis: 50%;
+      }
+      .font-name p {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+      }
+      .font-sizes {
+        p {
+          margin: 0;
+          width: unset;
+        }
+        .pharagraph1 {
+          font-size: 20px;
+        }
+        .pharagraph2 {
+          font-size: 16px;
+        }
+        .pharagraph3 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .mockup {
+    grid-column: 1/9;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    .mockup-image {
+      text-align: center;
+    }
+  }
+  .the-app {
+    grid-column: 1/9;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 0;
+    .the-app-container {
+      color: $white;
+      grid-column: 2/8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5rem;
+    }
+    img {
+      max-width: 100%;
+    }
+    .the-app-card {
+      width: 315px;
+      text-align: left;
+    }
+  }
 }
 
 @media (min-width: $breakpoint-laptop) {
@@ -183,6 +404,37 @@
       gap: 2rem;
       margin: 3rem 0;
     }
+  }
+  .mockup {
+    grid-column: 1/16;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    .mockup-container {
+      grid-column: 3/13;
+    }
+  }
+  .the-app {
+    grid-column: 1/16;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    .the-app-container {
+      grid-column: 3/13;
+    }
+    img {
+      max-width: 100%;
+    }
+    .the-app-card {
+      width: 315px;
+      text-align: left;
+    }
+  }
+  .app-mobile {
+    display: none;
+  }
+  .app-desktop {
+    display: block;
   }
 }
 

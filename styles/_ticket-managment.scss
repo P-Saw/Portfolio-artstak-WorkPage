@@ -2,7 +2,6 @@
   position: relative;
   margin-bottom: 5rem;
   p {
-    font-family: "Moderat";
     font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
@@ -10,20 +9,25 @@
   }
   .slider-button {
     position: absolute;
-    width: 3rem;
-    height: 3rem;
-    background-color: $pink;
+    width: 50px;
+    height: 50px;
     border: none;
     border-radius: 50%;
     color: white;
     font-weight: bold;
   }
   .slider-button-left {
+    background: url(../images/sliderPhones/arrowLeft.png) no-repeat center
+        center,
+      $pink;
     top: 50%;
     left: 5%;
     z-index: 10;
   }
   .slider-button-right {
+    background: url(../images/sliderPhones/arrowRight.png) no-repeat center
+        center,
+      $pink;
     top: 50%;
     right: 5%;
   }
