@@ -314,12 +314,12 @@
   gap: 1rem;
 }
 
-.info-container .info-box span {
+.info-container .info-box .info-box-span {
   font-size: 1.4rem;
   font-weight: 300;
 }
 
-.info-container .info-box p {
+.info-container .info-box .info-box-p {
   font-size: 1.5rem;
   font-weight: 700;
   white-space: pre-line;
@@ -401,10 +401,10 @@
   .info-container .info-box {
     text-align: left;
   }
-  .info-container .info-box span {
+  .info-container .info-box .info-box-span {
     font-size: 1rem;
   }
-  .info-container .info-box p {
+  .info-container .info-box .info-box-p {
     margin-top: 1.2rem;
     font-size: 1rem;
   }
@@ -413,7 +413,7 @@
         -ms-flex-positive: 0.7;
             flex-grow: 0.7;
   }
-  .info-container .info-box:first-child p {
+  .info-container .info-box:first-child .info-box-p {
     margin-top: 0.2rem;
     font-size: 2rem;
   }
@@ -520,11 +520,11 @@
 }
 
 @media (min-width: 1440px) {
-  .info-container .info-box span,
-  .info-container .info-box p {
+  .info-container .info-box .info-box-span,
+  .info-container .info-box .info-box-p {
     font-size: 1.2rem;
   }
-  .info-container .info-box:first-child p {
+  .info-container .info-box:first-child .info-box-p {
     font-size: 2.2rem;
   }
   .qr-code {

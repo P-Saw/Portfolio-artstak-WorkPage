@@ -10,11 +10,11 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   .info-box {
-    span {
+    .info-box-span {
       font-size: 1.4rem;
       font-weight: 300;
     }
-    p {
+    .info-box-p {
       font-size: 1.5rem;
       font-weight: 700;
       white-space: pre-line;
@@ -94,16 +94,16 @@
     justify-content: space-between;
     .info-box {
       text-align: left;
-      span {
+      .info-box-span {
         font-size: 1rem;
       }
-      p {
+      .info-box-p {
         margin-top: 1.2rem;
         font-size: 1rem;
       }
       &:first-child {
         flex-grow: 0.7;
-        p {
+        .info-box-p {
           margin-top: 0.2rem;
           font-size: 2rem;
         }
@@ -204,12 +204,12 @@
   // CLIENT INFO
   .info-container {
     .info-box {
-      span,
-      p {
+      .info-box-span,
+      .info-box-p {
         font-size: 1.2rem;
       }
       &:first-child {
-        p {
+        .info-box-p {
           font-size: 2.2rem;
         }
       }
