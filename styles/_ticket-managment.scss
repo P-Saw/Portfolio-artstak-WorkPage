@@ -1,12 +1,7 @@
+// TICKET CONTAINER + SLIDER BUTTONS
 .ticket-managment {
   position: relative;
   margin-bottom: 5rem;
-  p {
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 1rem;
-  }
   .slider-button {
     position: absolute;
     width: 50px;
@@ -17,63 +12,61 @@
     font-weight: bold;
   }
   .slider-button-left {
+    z-index: 10;
+    top: 50%;
+    left: 5%;
     background: url(../images/sliderPhones/arrowLeft.png) no-repeat center
         center,
       $pink;
-    top: 50%;
-    left: 5%;
-    z-index: 10;
   }
   .slider-button-right {
+    top: 50%;
+    right: 5%;
     background: url(../images/sliderPhones/arrowRight.png) no-repeat center
         center,
       $pink;
-    top: 50%;
-    right: 5%;
   }
 }
+
+//PHONES SLIDER
 .slider-box {
   height: 525px;
-}
-.slider-track {
-  position: relative;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  transition: transform 1s ease;
-  .slide {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 2.5rem;
-    left: 0;
-    right: 0;
-  }
-  .current-slide img {
-    transform: scale(1.1);
+  .slider-track {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     transition: transform 1s ease;
+    .slide {
+      display: flex;
+      position: absolute;
+      top: 2.5rem;
+      right: 0;
+      left: 0;
+      justify-content: center;
+    }
+    .current-slide img {
+      transform: scale(1.1);
+      transition: transform 1s ease;
+    }
   }
 }
 
 @media (min-width: $breakpoint-tablet) {
   .ticket-managment {
     grid-column: 1/9;
-    p {
-      text-align: left;
-      font-size: 2rem;
-      margin-left: 12vw;
+    .small-heading {
+      margin-left: 14vw;
     }
   }
 }
+
 @media (min-width: $breakpoint-laptop) {
   .slider-button {
     display: none;
   }
   .ticket-managment {
     grid-column: 1/15;
-    p {
-      margin-left: 14.4vw;
-    }
   }
 }

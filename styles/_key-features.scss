@@ -1,51 +1,47 @@
-//KEY FEATURES GLOBALS
+//KEY FEATURES
 .key-features {
+  margin: 3rem 0rem;
   text-align: center;
-  margin: 3rem 1rem;
-  h2 {
-    font-size: 2.2rem;
-  }
 }
 
+//KEY TEXT CARD
 .key-text-card {
-  text-align: center;
   margin-top: 4rem;
-  span {
-    font-size: 1.2rem;
+  text-align: center;
+  .key-card-span {
     color: $grayTextAbove;
+    font-size: 1.2rem;
     font-weight: 300;
   }
-  h3 {
+  .key-heading {
     margin-top: 0;
     font-size: 1.9rem;
   }
-  p {
+  .key-pharagraph {
     padding: 0 2rem;
-    font-weight: 300;
     font-size: 1.125rem;
+    font-weight: 300;
   }
 }
 
 .mg-top-3 {
-  margin-top: 3rem;
+  margin: 3rem auto 0 auto;
 }
 .kf-1 {
   border-top: 1px $lineColor solid;
 }
 //ICONS IN LUVSEATS
 .icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  @include flexCenter;
   margin: 2rem 0;
+  gap: 1rem;
   .shadow {
     border-radius: 1.7rem;
     box-shadow: 10px 3px 50px -3px #ba7794;
   }
 }
 
-//DISCOVER IMAGES
+//BACKGROUND 2
 .background-2 {
   height: 543px;
   background: url(../images/key-bg-mobile.png) no-repeat left 50% center;
@@ -53,115 +49,114 @@
     display: none;
   }
 }
-// LENS VIEW IMAGES
-.lens-img {
-  .lens-desktop-img {
-    display: none;
-  }
-  img {
-    width: 100%;
-    max-width: 400px;
-  }
+
+//KEY MOBILE/DESKTOP IMAGES
+.key-desktop-img {
+  display: none;
+  margin: 0;
 }
+.key-mobile-img {
+  width: 100%;
+  max-width: 400px;
+}
+
+//LENS IMG
+.luv-img img {
+  max-width: 100%;
+}
+
 // MAP&LIST VIEW IMAGES
 .map-img {
-  margin: auto;
-  max-width: 400px;
   position: relative;
-  .map-desktop-img {
-    display: none;
-  }
-  img {
-    width: 100%;
-    max-width: 400px;
-  }
+  max-width: 400px;
   .pulsating-dot {
-    content: "";
     position: absolute;
-    background-color: $pink;
-    border-radius: 50%;
-    border: 2px $white solid;
+    top: 58%;
+    left: 80%;
     width: 16px;
     height: 16px;
-    left: 80%;
-    top: 58%;
+    border: 2px $white solid;
+    border-radius: 50%;
+    background-color: $pink;
+    content: "";
     &::after {
-      content: "";
       position: absolute;
-      border: 4px $pink solid;
-      border-radius: 50%;
       top: -10px;
       left: -10px;
       width: 32px;
       height: 32px;
-      opacity: 0;
+      border: 4px $pink solid;
+      border-radius: 50%;
       animation: pulseAnimation 1.5s linear infinite;
+      content: "";
+      opacity: 0;
     }
   }
 }
+
 // MONITOR IMAGE & CHART CARD
 .monitor-img {
   position: relative;
   img {
     margin-top: 5rem;
+    max-width: 100%;
   }
   .chart-card {
     position: absolute;
     right: 13%;
     width: 227px;
     height: 481px;
-    background-color: $white;
     border-radius: 25px;
+    background-color: $white;
     box-shadow: 12px 8px 50px -11px rgba(0, 0, 0, 0.67);
   }
 }
+
 //CHART IMAGE
 .chart-image {
-  position: relative;
-  padding: 5px;
-  height: 149px;
-  background: url(../images/listingsPhoto.png) no-repeat center center/contain;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-between;
+  height: 149px;
+  padding: 5px;
+  background: url(../images/listingsPhoto.png) no-repeat center center/contain;
   &::after {
-    content: "";
+    z-index: 1;
     position: absolute;
-    inset: 0;
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.7) 25%,
       rgba(0, 0, 0, 0) 60%
     );
-    z-index: 1;
+    content: "";
+    inset: 0;
   }
   .chart-dots {
     align-self: flex-end;
     width: 40px;
     height: 40px;
-    font-size: 1.4rem;
-    color: $componentsText;
-    background-color: $white;
     border-radius: 50%;
+    background-color: $white;
+    color: $componentsText;
+    font-size: 1.4rem;
   }
   .chart-info {
-    height: 38px;
     display: flex;
-    align-items: center;
-    gap: 10px;
     z-index: 2;
+    align-items: center;
+    height: 38px;
+    gap: 10px;
     .date {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: $fontMazzard;
-      font-size: 0.77rem;
-      font-weight: 500;
+      @include flexCenter;
       width: 38px;
       height: 38px;
       border-radius: 5px;
       background-color: rgba(255, 255, 255, 0.2);
       color: $white;
+      font-family: $fontMazzard;
+      font-size: 0.77rem;
+      font-weight: 500;
     }
     .pers-info {
       p {
@@ -171,8 +166,8 @@
       }
       .name {
         font-family: $fontMazzard;
-        font-weight: 500;
         font-size: 0.8125;
+        font-weight: 500;
       }
       .place {
         font-family: $fontSourceSans;
@@ -182,40 +177,44 @@
     }
   }
 }
+
 // CHART SEAT INFO
 .seat-info,
 .ticket-info {
-  margin: 15px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin: 15px;
 }
+
 .chart-info-box {
   display: flex;
   flex-direction: column;
 }
+
 .chart-bold {
+  color: $componentsText;
   font-family: $fontMazzard;
   font-size: 0.6875rem;
-  color: $componentsText;
 }
+
 .chart-light {
+  color: $componentsGrayText;
   font-family: $fontSourceSans;
   font-size: 0.625rem;
-  color: $componentsGrayText;
 }
+
 .ticket-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
   img {
     margin: 0;
   }
 }
+
 .chart-undercomment {
+  color: $componentsGrayText;
   font-family: $fontSourceSans;
   font-size: 0.7rem;
-  color: $componentsGrayText;
   text-align: center;
 }
 
@@ -229,24 +228,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
   margin-top: 5rem;
-  .chart-box1 {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-  }
-  .chart-box2 {
+  gap: 50px;
+  .chart-box {
     display: flex;
     flex-direction: column;
     gap: 50px;
   }
   .chart {
-    height: 270px;
     width: 270px;
-    background-color: $white;
+    height: 270px;
     padding: 2rem 3rem;
     border-radius: 5rem;
+    background-color: $white;
     canvas {
       width: 90%;
     }
@@ -261,8 +255,8 @@
 
 //BACKGROUND 3
 .background-3 {
-  margin-top: 5rem;
   height: 400px;
+  margin-top: 5rem;
   background: url(../images/background2.png) no-repeat center center/cover;
 }
 
@@ -278,11 +272,8 @@
   //KEY FEATURES GLOBALS
   .key-features {
     grid-column: 2/8;
-    h2 {
-      font-size: 3.125rem;
-      white-space: nowrap;
-    }
   }
+
   .key-content-container {
     display: flex;
     align-items: center;
@@ -292,18 +283,19 @@
       margin-top: 10rem;
     }
   }
+
   .key-text-card {
-    width: 315px;
-    text-align: left;
-    margin: 0;
     z-index: 2;
-    span {
+    width: 315px;
+    margin: 0;
+    text-align: left;
+    .key-card-span {
       font-size: 1.5rem;
     }
-    h3 {
+    .key-heading {
       font-size: 2.625rem;
     }
-    p {
+    .key-pharagraph {
       padding: 0;
     }
   }
@@ -311,66 +303,73 @@
   .kf-1 {
     display: flex;
     justify-content: space-between;
-    margin: 3rem 0;
+    margin: 2rem 0;
     .discover {
       margin-top: 15rem;
     }
   }
 
   .kf-2 {
-    margin: 4rem 0;
+    margin: 2rem 0;
     .icons {
       margin-top: 5rem;
     }
   }
 
-  //DISCOVER IMAGES
+  //BACKGROUND 2
   .background-2 {
-    height: 685px;
-    background: url(../images/key-bg.png) no-repeat center center;
     grid-column: 1/9;
+    height: 685px;
     margin-top: -12rem;
+    background: url(../images/key-bg.png) no-repeat center center;
   }
 
+  //FOR KEY CONTAINER TEXT TO LEFT
   .to-left {
     flex-direction: row-reverse;
   }
 
+  //CHART-CARD
+  .monitor-img .chart-card {
+    right: 25%;
+  }
+
+  //FOR 4 CHARTS DIV
   .charts {
     grid-column: 1/8;
   }
 
   //FOUR CHARTS
   .four-charts-container {
-    margin: 0;
     display: flex;
     align-items: unset;
-    gap: 2rem;
-    transform: skew(-20deg, 0deg) rotateZ(15deg) scaleY(0.8);
+    margin: 0;
     margin-left: -200px;
-    .chart-box2 {
+    transform: skew(-20deg, 0deg) rotateZ(15deg) scaleY(0.8);
+    gap: 2rem;
+    .chart-box-margin {
       margin-top: 50px;
     }
     .chart {
-      height: 240px;
       width: 240px;
+      height: 240px;
     }
     .blurry {
       position: relative;
       &::after {
-        content: "";
         position: absolute;
-        inset: 0;
         backdrop-filter: blur(1.5px);
+        content: "";
+        inset: 0;
       }
     }
   }
 
   //BACKGROUND 3
   .background-3 {
+    grid-column: 1/9;
     height: 600px;
     background: url(../images/background2.png) no-repeat top center/cover;
-    grid-column: 1/9;
   }
 }
 
@@ -383,30 +382,23 @@
     grid-column: 1/15;
   }
 
-  //LENS IMAGES
-  .lens-img {
-    .lens-desktop-img {
-      display: block;
-    }
-    .lens-mobile-img {
-      display: none;
-    }
-    img {
-      max-width: unset;
-    }
+  //KEY IMAGES
+
+  .key-desktop-img {
+    display: block;
+    max-width: 100%;
   }
-  // MAP IMAGES
+  .key-mobile-img {
+    display: none;
+  }
+
+  // LENS & MAP
+  .lens-img {
+    margin: 3rem 0 0 0;
+  }
   .map-img {
     max-width: unset;
-    .map-desktop-img {
-      display: block;
-    }
-    .map-mobile-img {
-      display: none;
-    }
-    img {
-      max-width: unset;
-    }
+    margin: 3rem 0 0 0;
     .pulsating-dot {
       left: 30%;
     }
@@ -428,15 +420,15 @@
     transform: skew(-20deg, 0deg) rotateZ(15deg) translateX(40px) scaleY(0.8);
     gap: 4rem;
     .chart {
-      height: 300px;
       width: 300px;
+      height: 300px;
     }
   }
 
   //BACKGROUND 3
   .background-3 {
-    height: 800px;
     grid-column: 1/15;
+    height: 800px;
   }
 }
 
@@ -447,8 +439,8 @@
   }
   .four-charts-container {
     .chart {
-      height: 400px;
       width: 400px;
+      height: 400px;
     }
   }
 }

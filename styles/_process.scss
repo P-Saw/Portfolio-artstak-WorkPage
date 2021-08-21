@@ -1,31 +1,26 @@
 .process {
   margin-top: 5rem;
   text-align: center;
-  h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-  }
-  p {
+  .process-pharagraph {
+    margin: 0;
+    padding: 1rem;
     font-size: 1.125rem;
     font-weight: 300;
-    padding: 1rem;
-    margin: 0;
   }
   .process-card {
-    background-color: $white;
-    border-radius: 30px;
     max-width: 270px;
     margin: auto;
-    h3 {
-      font-size: 1.9rem;
+    border-radius: 30px;
+    background-color: $white;
+    .process-card-heading {
       margin-bottom: 0;
       padding-top: 2rem;
       color: $componentsText;
+      font-size: 1.9rem;
     }
-    p {
-      font-size: 1.125rem;
+    .process-card-pharagraph {
       color: $componentsGrayText;
+      font-size: 1.125rem;
     }
     .icons {
       padding-bottom: 2rem;
@@ -40,8 +35,8 @@
 
 //TRANSITION PHONES
 .transition-mobile {
-  margin: 4rem auto;
   max-width: 300px;
+  margin: 4rem auto;
   text-align: center;
 }
 .transition-desktop {
@@ -50,48 +45,45 @@
 
 //USER FLOW ROADMAP
 .user-flow {
-  margin-top: 5rem;
-  border-top: 1px $lineColor solid;
   z-index: 1;
   position: relative;
-  h2 {
-    margin: 0;
-    text-align: center;
-  }
+  margin-top: 5rem;
+  border-top: 1px $lineColor solid;
   .roadmap-container {
-    z-index: 1;
-    padding: 3rem 0;
-    margin: 0 1rem;
     display: flex;
+    z-index: 1;
     align-items: center;
     justify-content: space-between;
+    margin: 0 1rem;
+    padding: 3rem 0;
     gap: 1rem;
     .roadmap {
-      flex-basis: 50%;
       display: flex;
+      flex-basis: 50%;
       flex-direction: column;
       justify-content: center;
       label {
-        font-size: 0.8rem;
+        display: block;
         position: relative;
         width: 100%;
         min-width: 100px;
         max-width: 220px;
-        display: block;
-        background: $white;
-        color: black;
-        border-radius: 2rem;
         margin: 2rem auto;
         padding: 20px 10px;
         border: 1px $lineColor solid;
+        border-radius: 2rem;
+        background: $white;
+        color: $componentsText;
+        font-size: 0.8rem;
+        font-weight: 700;
         &:not(:last-child)::after {
-          content: "";
           position: absolute;
+          bottom: -70px;
+          left: 50%;
           width: 1px;
           height: 70px;
           background-color: $lineColor;
-          left: 50%;
-          bottom: -70px;
+          content: "";
         }
       }
       input {
@@ -104,6 +96,7 @@
     }
   }
 }
+
 .user-phone-image {
   display: none;
   width: 100%;
@@ -112,35 +105,38 @@
   display: block;
 }
 .background-pink {
-  position: absolute;
-  background-color: $pink;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 50%;
   z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
   transform: translateX(60%);
+  background-color: $pink;
 }
 
 // TYPOGRAPHY
 .typography {
-  position: relative;
   z-index: 1;
+  position: relative;
   margin: 5rem 0;
   .font-container {
     display: flex;
     flex-direction: column;
   }
+  .font-name-container {
+    flex: 1 1 50%;
+    padding: 0;
+  }
+  .font-sizes {
+    flex: 1 1 50%;
+  }
   .mazzard {
     margin-top: 3rem;
     font-family: $fontMazzard;
-    .font-name p {
-      flex: 1 1 50%;
-      font-size: 70px;
-      padding: 0;
-    }
-    .font-sizes {
-      flex: 1 1 50%;
+    .font-name {
+      font-size: 60px;
+      font-weight: 700;
     }
     .large-header {
       font-size: 42px;
@@ -165,12 +161,10 @@
       font-size: 16px;
     }
   }
-  .source {
+  .source-sans {
     font-family: $fontSourceSans;
-    .font-name p {
-      flex: 1 1 50%;
+    .font-name {
       font-size: 32px;
-      font-weight: 700;
     }
     .pharagraph1 {
       font-size: 20px;
@@ -183,14 +177,13 @@
     }
   }
   .background-heart {
-    position: absolute;
-    background: url(../images/roadMapBg.png) no-repeat center left;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
     z-index: -1;
-    transform: translateX(-20%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../images/roadMapBg.png) no-repeat center left;
   }
 }
 
@@ -199,21 +192,19 @@
   padding: 4rem 1rem;
   background-color: $pink;
   .mockup-container {
+    grid-column: 2/8;
     border-top: 1px $white solid;
     color: $white;
-    grid-column: 2/8;
   }
   img {
     max-width: 100%;
   }
 }
 .the-app {
-  grid-column: 1/9;
   padding: 1rem;
   background-color: $theAppBg;
   .the-app-container {
     color: $white;
-    grid-column: 2/8;
   }
   .the-app-image {
     text-align: center;
@@ -223,17 +214,19 @@
     margin-top: -4rem;
   }
   .the-app-card {
-    text-align: center;
     margin-top: 2rem;
-    span {
+    text-align: center;
+    .app-span {
       font-size: 1.5rem;
       font-weight: 300;
     }
-    h3 {
+    .app-heading {
+      margin: 0.5rem 0 1.5rem 0;
       font-size: 2.625rem;
     }
-    p {
+    .app-pharagraph {
       font-size: 1.125rem;
+      font-weight: 300;
     }
   }
 }
@@ -264,33 +257,30 @@
 @media (min-width: $breakpoint-tablet) {
   .process {
     grid-column: 2/8;
-    h2 {
-      font-size: 3.125rem;
-    }
-    p {
-      margin: auto;
+    .process-pharagraph {
       width: 60%;
+      margin: auto;
     }
     .process-card-container {
       display: flex;
       flex-wrap: wrap;
       .process-card {
-        margin-top: 2rem;
         max-width: 300px;
+        margin-top: 2rem;
       }
     }
   }
 
   //USER FLOW ROADMAP
   .user-flow {
-    h2 {
-      text-align: left;
-    }
     .roadmap-container {
-      padding: 5rem 0;
       margin: 0;
+      padding: 5rem 0;
       .roadmap {
         flex-basis: 60%;
+        label {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -299,90 +289,45 @@
   .typography {
     text-align: left;
     .font-container {
-      margin-top: 4rem;
       flex-direction: row;
+      margin-top: 4rem;
+    }
+    .font-name {
+      margin: 0;
+    }
+    .mg-0-pd-1 {
+      margin: 0;
+      padding: 1rem;
     }
     .mazzard {
       margin-top: 3rem;
-      font-family: $fontMazzard;
-      p {
-        margin: 0;
-        font-weight: 700;
-      }
       .font-name {
-        flex-basis: 50%;
-      }
-      .font-sizes p {
-        width: unset;
-        .large-header {
-          font-size: 42px;
-          font-weight: 700;
-        }
-        .header1 {
-          font-size: 34px;
-        }
-        .header2 {
-          font-size: 28px;
-        }
-        .font-button {
-          font-size: 22px;
-        }
-        .title1 {
-          font-size: 20px;
-        }
-        .title2 {
-          font-size: 17px;
-        }
-        .title3 {
-          font-size: 16px;
-        }
-      }
-    }
-    .source {
-      font-family: $fontSourceSans;
-      .font-name {
-        flex-basis: 50%;
-      }
-      .font-name p {
-        font-size: 32px;
-        font-weight: 700;
-        margin: 0;
-        padding: 0;
-      }
-      .font-sizes {
-        p {
-          margin: 0;
-          width: unset;
-        }
-        .pharagraph1 {
-          font-size: 20px;
-        }
-        .pharagraph2 {
-          font-size: 16px;
-        }
-        .pharagraph3 {
-          font-size: 14px;
-        }
+        font-size: 70px;
       }
     }
   }
+
+  .background-heart {
+    transform: translateX(-20%);
+  }
+
   .mockup {
-    grid-column: 1/9;
     display: grid;
+    grid-column: 1/9;
     grid-template-columns: repeat(8, 1fr);
     .mockup-image {
       text-align: center;
     }
   }
+
   .the-app {
-    grid-column: 1/9;
     display: grid;
+    grid-column: 1/9;
     grid-template-columns: repeat(8, 1fr);
     padding: 0;
     .the-app-container {
-      color: $white;
-      grid-column: 2/8;
       display: flex;
+      grid-column: 2/8;
       align-items: center;
       justify-content: space-between;
       gap: 5rem;
@@ -401,33 +346,25 @@
   .process {
     grid-column: 3/13;
     .process-card-container {
-      gap: 2rem;
       margin: 3rem 0;
+      gap: 2rem;
     }
   }
+
   .mockup {
-    grid-column: 1/16;
-    gap: 30px;
     display: grid;
+    grid-column: 1/16;
     grid-template-columns: repeat(14, 1fr);
     .mockup-container {
       grid-column: 3/13;
     }
   }
+
   .the-app {
     grid-column: 1/16;
-    gap: 30px;
-    display: grid;
     grid-template-columns: repeat(14, 1fr);
     .the-app-container {
       grid-column: 3/13;
-    }
-    img {
-      max-width: 100%;
-    }
-    .the-app-card {
-      width: 315px;
-      text-align: left;
     }
   }
   .app-mobile {

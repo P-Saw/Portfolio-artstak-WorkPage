@@ -1,4 +1,5 @@
 // Global
+//colors
 $yellow: #e2f754;
 $black: #000000;
 $white: #ffffff;
@@ -9,8 +10,6 @@ $grayPharagraph: #a3a3a3;
 $grayTextAbove: #828282;
 $theAppBg: #262322;
 $lineColor: #d0d0d0;
-
-// Components
 $componentsText: #343240;
 $componentsGrayText: #9f9ab7;
 $chartGreen: #40b1a1;
@@ -31,6 +30,12 @@ $breakpoint-tablet: 768px;
 $breakpoint-laptop: 1024px;
 $breakpoint-desktop: 1440px;
 
+//mixin
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 //animation
 @keyframes pulseAnimation {
   0% {
