@@ -86,6 +86,11 @@
           align-items: center;
 }
 
+.navbar .logo .logo-only {
+  -webkit-transform: translateX(-50vw);
+          transform: translateX(-50vw);
+}
+
 .navbar .logo .logo-text {
   -webkit-transform: translateX(-300%);
           transform: translateX(-300%);
@@ -1852,6 +1857,60 @@ main {
 
 .top-active:hover {
   border: 1px black solid;
+}
+
+.intro {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  background-color: #e2f754;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.intro .intro-logo {
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.intro .intro-logo .intro-only-logo {
+  width: 100px;
+  -webkit-transform: translateY(-52vh);
+          transform: translateY(-52vh);
+}
+
+.intro .intro-logo .intro-logo-text {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.slider-black {
+  position: fixed;
+  background-color: #000000;
+  inset: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 @media (min-width: 768px) {

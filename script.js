@@ -1,3 +1,12 @@
+//INTRO LOAD
+const tl = gsap.timeline();
+
+tl.to(".intro-only-logo", { y: "0vh", duration: 1.5, ease: "bounce.out" });
+tl.to(".intro-logo-text", { y: "0%", opacity: 1, duration: 1 });
+tl.to(".slider-black", { x: "-100%", duration: 1.5 });
+tl.to(".intro", { x: "-100%", duration: 1.5 }, "-=1");
+tl.to(".logo-only", { x: "0vw", duration: 1.5, ease: "power4.out" });
+
 // MENU HAMBURGER TOGGLE//
 const hamburgerBtn = document.querySelector(".menu-hamburger");
 const nav = document.querySelector(".nav");

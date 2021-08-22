@@ -9,6 +9,9 @@
   .logo {
     display: flex;
     align-items: center;
+    .logo-only {
+      transform: translateX(-50vw);
+    }
     .logo-text {
       transform: translateX(-300%);
       transition: transform 0.4s ease-in;
