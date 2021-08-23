@@ -74,6 +74,7 @@ main {
   position: fixed;
   inset: 0;
   background-color: $yellow;
+  z-index: 1000;
   @include flexCenter;
   .intro-logo {
     height: 100%;
@@ -91,6 +92,7 @@ main {
   }
 }
 .slider-black {
+  z-index: 1001;
   position: fixed;
   background-color: $black;
   inset: 0;
