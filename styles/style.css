@@ -656,7 +656,7 @@
 .background-1 {
   height: 400px;
   margin-top: 5rem;
-  background: url(../images/background1.png) no-repeat center center/cover;
+  background: url(../images/background1.webp) no-repeat center center/cover;
 }
 
 @media (min-width: 768px) {
@@ -690,7 +690,7 @@
     -ms-grid-column-span: 8;
     grid-column: 1/9;
     height: 600px;
-    background: url(../images/background1.png) no-repeat top center/cover;
+    background: url(../images/background1.webp) no-repeat top center/cover;
   }
 }
 
@@ -771,7 +771,7 @@
 
 .background-2 {
   height: 543px;
-  background: url(../images/key-bg-mobile.png) no-repeat left 50% center;
+  background: url(../images/key-bg-mobile.webp) no-repeat left 50% center;
 }
 
 .background-2 img {
@@ -857,7 +857,7 @@
           justify-content: space-between;
   height: 149px;
   padding: 5px;
-  background: url(../images/listingsPhoto.png) no-repeat center center/contain;
+  background: url(../images/listingsPhoto.webp) no-repeat center center/contain;
 }
 
 .chart-image::after {
@@ -1043,7 +1043,7 @@
 .background-3 {
   height: 400px;
   margin-top: 5rem;
-  background: url(../images/background2.png) no-repeat center center/cover;
+  background: url(../images/background2.webp) no-repeat center center/cover;
 }
 
 @media (min-width: 480px) {
@@ -1119,7 +1119,7 @@
     grid-column: 1/9;
     height: 685px;
     margin-top: -12rem;
-    background: url(../images/key-bg.png) no-repeat center center;
+    background: url(../images/key-bg.webp) no-repeat center center;
   }
   .to-left {
     -webkit-box-orient: horizontal;
@@ -1170,7 +1170,7 @@
     -ms-grid-column-span: 8;
     grid-column: 1/9;
     height: 600px;
-    background: url(../images/background2.png) no-repeat top center/cover;
+    background: url(../images/background2.webp) no-repeat top center/cover;
   }
 }
 
